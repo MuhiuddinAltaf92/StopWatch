@@ -1,0 +1,278 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #121212;
+  color: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  text-align: center;
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+  width: 90%; /* Responsive width */
+  max-width: 600px; /* Max width for larger screens */
+}
+
+.main-heading {
+  font-size: 36px; /* Size of the heading */
+  margin-bottom: 20px; /* Space below the heading */
+  color: #FFC107; /* Highlight color for heading */
+}
+
+.description {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #E0E0E0; /* Lighter color for description */
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0 10px;
+  padding: 10px;
+  font-size: 48px;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+.buttons {
+  display: flex; /* Use flexbox for button layout */
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  justify-content: center; /* Center buttons */
+}
+
+button {
+  display: inline-block;
+  width: 120px;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  background-color: #3b3b3b;
+  color: #ffffff;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #616161;
+}
+
+button:disabled {
+  background-color: #444444;
+  cursor: not-allowed;
+}
+
+#start-btn {
+  background-color: #4CAF50;
+}
+
+#start-btn:hover {
+  background-color: #66BB6A;
+}
+
+#stop-btn {
+  background-color: #F44336;
+}
+
+#stop-btn:hover {
+  background-color: #E57373;
+}
+
+#lap-btn {
+  background-color: #2196F3; /* Blue for Lap */
+}
+
+#lap-btn:hover {
+  background-color: #42A5F5;
+}
+
+#reset-btn {
+  background-color: #FFC107;
+}
+
+#reset-btn:hover {
+  background-color: #FFCA28;
+}
+
+.laps {
+  margin-top: 20px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.lap-item {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 28px; /* Smaller heading on smaller screens */
+  }
+
+  .time {
+    font-size: 36px; /* Smaller time display */
+  }
+
+  h1 {
+    font-size: 36px; /* Smaller individual time units */
+  }
+
+  button {
+    width: 100%; /* Full width buttons on small screens */
+    font-size: 16px; /* Smaller button text */
+  }
+
+  .description {
+    font-size: 16px; /* Adjust description size */
+  }
+}
+:root {
+  --background-color: #121212; /* Dark mode background */
+  --text-color: #f5f5f5; /* Dark mode text color */
+  --container-background: #1e1e1e; /* Dark mode container */
+  --button-background: #3b3b3b; /* Dark mode button */
+}
+
+.light-mode {
+  --background-color: #ffffff; /* Light mode background */
+  --text-color: #000000; /* Light mode text color */
+  --container-background: #f0f0f0; /* Light mode container */
+  --button-background: #e7f3ff; /* Light mode button background */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  text-align: center;
+  background-color: var(--container-background);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+  width: 90%; /* Responsive width */
+  max-width: 600px; /* Max width for larger screens */
+}
+
+/* Other styles remain unchanged */
+
+button {
+  background-color: var(--button-background);
+  /* Other button styles remain unchanged */
+}
+
+#start-btn {
+  background-color: #4CAF50; /* Green */
+}
+
+#stop-btn {
+  background-color: #F44336; /* Red */
+}
+
+#lap-btn {
+  background-color: #2196F3; /* Blue for Lap */
+}
+
+#reset-btn {
+  background-color: #FFC107; /* Yellow */
+}
+
+/* Add hover effects */
+button:hover {
+  opacity: 0.8; /* Slightly dim on hover */
+}
+
+/* Media Queries for responsiveness remain unchanged */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.toggle-label {
+  margin-right: 10px; /* Space between label and checkbox */
+  font-size: 18px; /* Size of the label text */
+  color: var(--text-color); /* Color based on current mode */
+}
+
+#mode-toggle {
+  width: 50px; /* Width of the checkbox */
+  height: 24px; /* Height of the checkbox */
+  -webkit-appearance: none; /* Remove default styling */
+  background-color: #ccc; /* Background color when unchecked */
+  border-radius: 50px; /* Rounded corners */
+  position: relative; /* Positioning for the pseudo-element */
+  outline: none; /* Remove outline */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+#mode-toggle:checked {
+  background-color: #4CAF50; /* Color when checked */
+}
+
+#mode-toggle:checked::before {
+  transform: translateX(26px); /* Move the slider */
+}
+
+#mode-toggle::before {
+  content: ""; /* Create a pseudo-element */
+  width: 22px; /* Width of the slider */
+  height: 22px; /* Height of the slider */
+  border-radius: 50%; /* Rounded slider */
+  background-color: white; /* Color of the slider */
+  position: absolute; /* Positioning within the toggle */
+  top: 1px; /* Position from the top */
+  left: 1px; /* Position from the left */
+  transition: transform 0.3s; /* Smooth transition for the slider */
+}
+
+/* Media Query for small screens */
+@media (max-width: 768px) {
+  .toggle-label {
+      font-size: 16px; /* Smaller label text */
+  }
+
+  #mode-toggle {
+      width: 40px; /* Smaller width */
+      height: 20px; /* Smaller height */
+  }
+
+  #mode-toggle::before {
+      width: 18px; /* Smaller slider */
+      height: 18px; /* Smaller slider */
+  }
+}
+
+

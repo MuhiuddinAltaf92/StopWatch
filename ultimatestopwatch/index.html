@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Stopwatch</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-heading">Ultimate Stopwatch</h1>
+        <div class="toggle-container">
+            <label for="mode-toggle" class="toggle-label">Light Mode</label>
+            <input type="checkbox" id="mode-toggle" onclick="toggleMode()">
+        </div>
+        <div class="time" id="time-display">
+            <h1 id="hour">00</h1> :
+            <h1 id="min">00</h1> :
+            <h1 id="sec">00</h1> :
+            <h1 id="msec">00</h1>
+        </div>
+        <div class="buttons">
+            <button id="start-btn" onclick="start()">START</button>
+            <button id="stop-btn" onclick="stop()">STOP</button>
+            <button id="lap-btn" onclick="lap()">LAP</button>
+            <button id="reset-btn" onclick="reset()">RESET</button>
+        </div>
+        <div id="laps" class="laps"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
